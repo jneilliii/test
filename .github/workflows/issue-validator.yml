@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run fabiankoestring/body-regex-validator-action
-        uses: fabiankoestring/body-regex-validator-action@master
+        uses: relicx-ai/body-regex-validator-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PULL_REQUEST_PATTERN: '^(.*Description.*Changes.*Tests.*)$'
