@@ -12,14 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: Okabe-Junya/issue-validator@v0.4.1
-        id: validator
-        with:
-          body: /\[(octoprint\.log)\]/g
-          body-regex-flags: 'true'
-          is-auto-close: 'true'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - run:   echo "$OUTPUTS"
-        shell: bash
+      - name: Run fabiankoestring/body-regex-validator-action
+        uses: fabiankoestring/body-regex-validator-action@master
         env:
-          OUTPUTS: ${{ toJSON(steps.validator.outputs) }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PULL_REQUEST_PATTERN: '^(.*Description.*Changes.*Tests.*)$'
+          PULL_REQUEST_COMMENT: 'This is my pr comment template.'
+          ISSUE_PATTERN: '^(.*\[plugin_bambu_printer_serial\.log\].*)|(.*\[octoprint\.log\].*)$'
+          ISSUE_COMMENT: 'This is my issue comment template.'
