@@ -19,4 +19,4 @@ jobs:
           PULL_REQUEST_PATTERN: '^(.*Description.*Changes.*Tests.*)$'
           PULL_REQUEST_COMMENT: 'This is my pr comment template.'
           ISSUE_PATTERN: '^(.*\[plugin_bambu_printer_serial\.log\].*)|(.*\[octoprint\.log\].*)$'
-          ISSUE_COMMENT: 'Required log files not included.'
+          ISSUE_COMMENT: 'Required log files not included, please edit original post with octoprint.log and plugin_bambu_printer_serial.log.'
