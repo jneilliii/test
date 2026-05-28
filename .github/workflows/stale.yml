@@ -19,3 +19,11 @@ jobs:
         days-before-issue-close: 7
         days-before-pr-close: -1
         exempt-issue-labels: 'bug,enhancement'
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+    - uses: jneilliii/gh-workflow-keepalive@v1.2.1
+    
