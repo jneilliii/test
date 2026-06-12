@@ -47,7 +47,7 @@
         "published": "2026-06-11 00:00:00 +0000",
         "title": "BitBang",
         "description": "Free remote access and webcam streaming.",
-        "archive": "OctoPrint-BitBang",
+        "archive": "https://files.pythonhosted.org/packages/ad/b3/4f0335f6109e391e973f70fe6cbe7efdc30aeec72cc1cd729d99fbcedea2/octoprint_bitbang-0.2.4-py3-none-any.whl",
         "author": "Rich LeGrand",
         "homepage": "https://github.com/richlegrand/OctoPrint-BitBang",
         "page": "https://plugins.octoprint.org/plugins/bitbang/",
